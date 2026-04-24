@@ -160,12 +160,29 @@
       </div>
 
       <div class="col-lg-6">
-        <form onsubmit="handleForm(event)">
-          <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
-          <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
-          <input type="text" name="company" class="form-control mb-2" placeholder="Company">
-          <textarea name="message" class="form-control mb-2" placeholder="Message"></textarea>
-          <button class="btn btn-primary">Send inquiry</button>
+        <form action="https://formsubmit.co/etikaahuja@gmail.com" method="POST">
+          
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Project Inquiry">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Name" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" name="company" class="form-control" placeholder="Company / Project">
+          </div>
+
+          <div class="mb-3">
+            <textarea name="message" class="form-control" rows="4" placeholder="Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send inquiry</button>
         </form>
       </div>
 

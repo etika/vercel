@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hire Me – Ruby on Rails Consultant | Etika Ahuja</title>
+  <meta name="description" content="Hire Etika Ahuja, a Ruby on Rails consultant..." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="container mt-5">
+  <h1>🚀 Ruby on Rails Consultant</h1>
+  <p>I help startups build and scale web apps.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="container mt-5">
+  <h2>Contact</h2>
+  <form onsubmit="sendMail(event)">
+    <input class="form-control mb-2" name="name" placeholder="Name" required>
+    <input class="form-control mb-2" name="email" placeholder="Email" required>
+    <textarea class="form-control mb-2" name="message" placeholder="Message"></textarea>
+    <button class="btn btn-primary">Send</button>
+  </form>
+</section>
+
+<!-- CHATBOT -->
+<div style="position:fixed; bottom:20px; right:20px;">
+  <button onclick="toggleChat()" class="btn btn-primary">💬</button>
+  <div id="chat" style="display:none; background:#fff; padding:10px; width:250px; border:1px solid #ccc;">
+    <div id="messages">👋 Hi! Ask me anything.</div>
+    <input id="input" class="form-control mt-2" placeholder="Type...">
+    <button onclick="reply()" class="btn btn-sm btn-primary mt-2">Send</button>
+  </div>
+</div>
+
+<script>
+function sendMail(e){
+  e.preventDefault();
+  alert("Thanks! I'll contact you.");
+}
+
+function toggleChat(){
+  const c = document.getElementById("chat");
+  c.style.display = c.style.display === "none" ? "block" : "none";
+}
+
+function reply(){
+  const input = document.getElementById("input");
+  const msg = input.value;
+  const messages = document.getElementById("messages");
+
+  messages.innerHTML += "<br><b>You:</b> " + msg;
+
+  let botReply = "Thanks! Please book a call.";
+  if(msg.toLowerCase().includes("price")) botReply = "Projects start from $1k.";
+
+  messages.innerHTML += "<br><b>Bot:</b> " + botReply;
+  input.value = "";
+}
+</script>
+
+</body>
+</html>

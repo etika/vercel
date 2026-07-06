@@ -1,4 +1,0 @@
--User-agent: *
-Allow: /
-
-Sitemap: https://ahujalabs.vercel.app/sitemap.xml

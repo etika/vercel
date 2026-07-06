@@ -1,10 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahuja Labs — SaaS & AI Development Studio</title>
-  <meta name="description" content="We build scalable SaaS and AI-powered applications. Ruby on Rails, LLMs, and cloud infrastructure for startups and growth-stage companies." />
+  <title>Ruby on Rails & AI Development Studio for Startups | Ahuja Labs</title>
+  <meta name="description" content="Boutique Ruby on Rails and AI/LLM development studio. We build SaaS MVPs, integrate AI chatbots & RAG pipelines, and fix slow apps for startups. Free consultation." />
+  <link rel="canonical" href="https://ahujalabs.vercel.app/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ruby on Rails & AI Development Studio for Startups | Ahuja Labs" />
+  <meta property="og:description" content="Boutique dev studio building SaaS products and AI/LLM integrations for startups. Senior engineers only, no handoffs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahujalabs.vercel.app/" />
+  <meta property="og:image" content="https://ahujalabs.vercel.app/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ruby on Rails & AI Development Studio for Startups" />
+  <meta name="twitter:description" content="We build SaaS MVPs and AI-powered features for startups. Book a free consultation." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ahuja Labs",
+    "description": "Boutique Ruby on Rails and AI/LLM development studio for startups and growth-stage companies.",
+    "url": "https://ahujalabs.vercel.app/",
+    "founder": {
+      "@type": "Person",
+      "name": "Etika Ahuja"
+    },
+    "areaServed": ["India", "United Kingdom", "Global / Remote"],
+    "serviceType": ["Ruby on Rails development", "AI and LLM integration", "Application performance optimization"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "etikaahuja@gmail.com",
+      "contactType": "sales"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to build a SaaS MVP with Ahuja Labs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost depends on scope, but most SaaS MVPs on Ruby on Rails start with a 4–8 week build. We'll scope your specific requirements on a free consultation call and give you a fixed estimate before any work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with early-stage startups or only established companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We've built greenfield MVPs for pre-seed founders and optimized production systems for scale-ups like Builder.ai and Zencargo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI/LLM providers do you integrate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work with OpenAI and Anthropic's Claude models most often, and build RAG pipelines, WhatsApp AI agents, and custom automation on top of either."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can you turn around an MVP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A focused SaaS MVP typically takes 4–8 weeks from kickoff to launch, depending on scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I work directly with the engineer, or through account managers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Directly with the engineer. Ahuja Labs is a boutique studio with no junior handoffs and no account-manager layer."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
@@ -526,6 +612,55 @@
       line-height: 1.5;
     }
 
+    /* ── FAQ ── */
+    .faq-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 760px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 1.5rem 0;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform .2s;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item p {
+      font-size: 0.9375rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-top: 0.875rem;
+      max-width: 640px;
+    }
+
     /* ── CONTACT ── */
     .contact-inner {
       max-width: 1100px;
@@ -707,6 +842,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#about">Studio</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="https://calendly.com/etikash10" class="nav-cta">Book a call</a></li>
   </ul>
 </nav>
@@ -719,9 +855,9 @@
         <span class="pulse"></span>
         Available for new projects
       </div>
-      <h1>We build <em>SaaS & AI</em> products that scale</h1>
+      <h1>Ruby on Rails & <em>AI</em> Development Studio for Startups</h1>
       <p class="hero-sub">
-        Ahuja Labs is a boutique development studio specializing in Ruby on Rails, LLM integrations, and cloud infrastructure — built by engineers who've shipped for startups and scale-ups alike.
+        Ahuja Labs is a boutique Ruby on Rails and AI/LLM development studio. We build SaaS MVPs, integrate AI chatbots and RAG pipelines, and scale production systems — for founders who need senior engineers, not a handoff chain.
       </p>
       <div class="hero-actions">
         <a href="https://calendly.com/etikash10" class="btn-primary">Book free consultation →</a>
@@ -766,14 +902,14 @@
 <section id="services" class="section">
   <div class="section-inner">
     <p class="section-tag">What we do</p>
-    <h2>Built for founders who need to move fast</h2>
+    <h2>SaaS, AI & Rails development for founders who need to move fast</h2>
     <p class="section-desc">We work as your dedicated technical partner — from greenfield MVP to scaling existing systems.</p>
 
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">⚙️</div>
-        <h3>SaaS Development</h3>
-        <p>Full-stack product builds using Ruby on Rails. From MVP in weeks to multi-tenant platforms at scale.</p>
+        <h3>SaaS & MVP Development (Ruby on Rails)</h3>
+        <p>Full-stack SaaS product builds on Ruby on Rails — from a working MVP in weeks to a multi-tenant platform at scale.</p>
         <div class="service-tags">
           <span class="tag">Ruby on Rails</span>
           <span class="tag">PostgreSQL</span>
@@ -784,8 +920,8 @@
 
       <div class="service-card">
         <div class="service-icon">🤖</div>
-        <h3>AI & LLM Integration</h3>
-        <p>Embed intelligence into your product — chatbots, automation pipelines, and AI-powered features that actually work.</p>
+        <h3>AI & LLM Integration for SaaS Products</h3>
+        <p>We embed AI into existing products — chatbots, RAG pipelines, WhatsApp AI agents, and automation that actually ships to production.</p>
         <div class="service-tags">
           <span class="tag">OpenAI / Claude</span>
           <span class="tag">RAG</span>
@@ -796,8 +932,8 @@
 
       <div class="service-card">
         <div class="service-icon">📈</div>
-        <h3>Performance & Scaling</h3>
-        <p>Slow app costing you customers? We diagnose bottlenecks, optimize queries, and make your system bulletproof.</p>
+        <h3>Rails Performance & Scaling Audits</h3>
+        <p>A slow app is losing you customers right now. We diagnose bottlenecks, fix N+1 queries, and make your Rails app fast and reliable under real traffic.</p>
         <div class="service-tags">
           <span class="tag">AWS</span>
           <span class="tag">CI/CD</span>
@@ -815,7 +951,7 @@
     <div class="work-header">
       <div>
         <p class="section-tag">Selected work</p>
-        <h2>Real systems, real results</h2>
+        <h2>Real Ruby on Rails & AI projects, real results</h2>
       </div>
       <p class="section-desc" style="max-width:320px">Projects across logistics, healthcare, travel, gaming, and more.</p>
     </div>
@@ -823,37 +959,37 @@
     <div class="work-grid">
       <div class="work-card">
         <div class="work-industry">SaaS / Enterprise</div>
-        <h4>Builder.ai</h4>
-        <p>Maintained and optimized large-scale SaaS applications with measurable performance improvements and reliability fixes.</p>
+        <h4>Builder.ai — SaaS Performance Optimization</h4>
+        <p>Diagnosed and fixed database bottlenecks in a large-scale Ruby on Rails SaaS platform, cutting page load times and reducing production errors.</p>
       </div>
 
       <div class="work-card">
         <div class="work-industry">Logistics</div>
-        <h4>Zencargo</h4>
-        <p>Developed shipment tracking, scheduling, and workflow automation features for a leading freight management platform.</p>
+        <h4>Zencargo — Logistics SaaS Development</h4>
+        <p>Developed shipment tracking, scheduling, and workflow automation features in Ruby on Rails for a leading freight management platform.</p>
       </div>
 
       <div class="work-card">
         <div class="work-industry">Healthcare</div>
-        <h4>Appointment Platform</h4>
-        <p>Built a patient-doctor booking system with real-time availability, notifications, and admin workflows.</p>
+        <h4>Appointment Platform — Healthcare SaaS Build</h4>
+        <p>Built a patient-doctor booking system in Rails with real-time availability, notifications, and admin workflows.</p>
       </div>
 
       <div class="work-card">
         <div class="work-industry">Nonprofit / Fintech</div>
-        <h4>Donation System</h4>
-        <p>End-to-end platform for managing, routing, and automating charitable contributions at scale.</p>
+        <h4>Donation System — Fintech Automation</h4>
+        <p>End-to-end Rails platform for managing, routing, and automating charitable contributions at scale.</p>
       </div>
 
       <div class="work-card">
         <div class="work-industry">Gaming</div>
-        <h4>Gaming Platform</h4>
-        <p>Recommendation engine and backend performance overhaul reducing latency and improving user retention.</p>
+        <h4>Gaming Platform — Recommendation Engine</h4>
+        <p>Built a recommendation engine and backend performance overhaul, reducing latency and improving user retention.</p>
       </div>
 
       <div class="work-card">
         <div class="work-industry">Travel</div>
-        <h4>TravelTriangle</h4>
+        <h4>TravelTriangle — Mobile Refactor</h4>
         <p>Refactored mobile experience and improved system stability through comprehensive test coverage and architecture cleanup.</p>
       </div>
     </div>
@@ -865,7 +1001,7 @@
   <div class="founder-inner">
     <div>
       <p class="founder-label">The studio</p>
-      <h2>Boutique by design. Senior by default.</h2>
+      <h2>Boutique Rails & AI development studio. Senior by default.</h2>
       <p class="founder-bio">
         Ahuja Labs was founded by Etika Ahuja — a senior Rails and AI engineer with over a decade of experience building production software across six industries. We operate as a focused studio: no juniors, no handoffs, no fluff.
       </p>
@@ -895,6 +1031,38 @@
         <div class="highlight-num">Remote</div>
         <div class="highlight-desc">Working with clients across India, UK, and beyond</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="section-inner">
+    <p class="section-tag">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <p class="section-desc">Common questions from founders before we start working together.</p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How much does it cost to build a SaaS MVP with Ahuja Labs?</summary>
+        <p>Cost depends on scope, but most SaaS MVPs on Ruby on Rails start with a 4–8 week build. We'll scope your specific requirements on a free consultation call and give you a fixed estimate before any work begins.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with early-stage startups or only established companies?</summary>
+        <p>Both. We've built greenfield MVPs for pre-seed founders and optimized production systems for scale-ups like Builder.ai and Zencargo. If you need a technical partner rather than a full internal team, we're a fit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What AI/LLM providers do you integrate?</summary>
+        <p>We work with OpenAI and Anthropic's Claude models most often, and build RAG pipelines, WhatsApp AI agents, and custom automation on top of either — whichever fits your product and budget.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How fast can you turn around an MVP?</summary>
+        <p>A focused SaaS MVP typically takes 4–8 weeks from kickoff to launch, depending on scope. We'll give you a realistic timeline on the first call, not an inflated one to win the project.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I work directly with the engineer, or through account managers?</summary>
+        <p>Directly with the engineer. Ahuja Labs is a boutique studio — no junior handoffs, no account-manager layer between you and the person writing your code.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -965,6 +1133,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#about">Studio</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="https://calendly.com/etikash10">Book a call</a></li>
   </ul>
   <span class="footer-copy">© 2026 Ahuja Labs</span>
